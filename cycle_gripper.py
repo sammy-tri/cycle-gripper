@@ -26,8 +26,11 @@ def close_gripper(lc):
 
 def main():
     lc = lcm.LCM()
+    num_cycles = 0
 
     while True:
+        num_cycles += 1
+        print("gripper cycle", num_cycles)
         open_gripper(lc)
         time.sleep(5)
         close_gripper(lc)
